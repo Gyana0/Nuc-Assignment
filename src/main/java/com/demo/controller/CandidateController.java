@@ -39,12 +39,23 @@ public class CandidateController {
         }
         // Increment vote count of candidate
         Candidate candidate = candidates.get(name);
-        candidate.getVoteCount();
+        candidate.setVoteCount(candidate.getVoteCount()+1);
         
         // Update candidate in the list
         candidates.put(name, candidate);
         return candidate.getVoteCount();
     }
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
 
     @GetMapping("/countvote")
     public int countvote(@RequestParam String name) {
